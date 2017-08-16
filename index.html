@@ -242,7 +242,7 @@
 
     </aside>
 
-    <!-- Map -->
+    <!-- Map --><!-- 
     <section id="contact" class="map">
         <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe>
         <br />
@@ -250,6 +250,37 @@
             <a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A"></a>
         </small>
     </section>
+ -->
+
+<div id="map" style="width:100%;height:500px"></div>
+
+<script>
+function myMap() {
+  var rpi = new google.maps.LatLng(42.7302,-73.6788);
+  var nyu = new google.maps.LatLng(40.7295,-73.9965);
+  
+  var mapCanvas = document.getElementById("map");
+  var mapOptions = {center: nyu, zoom: 6};
+  var map = new google.maps.Map(mapCanvas, mapOptions);
+  
+  var marker1 = new google.maps.Marker({position:rpi});
+  var marker2 = new google.maps.Marker({position:nyu});
+  
+  marker1.setMap(map);
+  marker2.setMap(map);
+   var infowindow = new google.maps.InfoWindow({
+    content: "Hello World!"
+  });
+  infowindow.open(map,marker);
+}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBKaRTQet_0WNGbmUoEy0Q8lGL0qNKim5g&callback=myMap"></script>
+<!--
+To use this code on your website, get a free API key from Google.
+Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
+-->
+
 
     <!-- Footer -->
     <footer>
