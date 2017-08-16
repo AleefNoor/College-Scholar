@@ -256,23 +256,60 @@
 
 <script>
 function myMap() {
-  var rpi = new google.maps.LatLng(42.7302,-73.6788);
+    // CUNY MAP Coordinates
+  var Baruch = new google.maps.LatLng(40.7402,-73.9834);
   var nyu = new google.maps.LatLng(40.7295,-73.9965);
+  var Brooklyn = new google.maps.LatLng(40.6314,-73.9544);
+  var  = new google.maps.LatLng(,-);
+
   
   var mapCanvas = document.getElementById("map");
   var mapOptions = {center: nyu, zoom: 6};
   var map = new google.maps.Map(mapCanvas, mapOptions);
-  
+
+  // You Have To Make a new marker variable for every college 
   var marker1 = new google.maps.Marker({position:rpi});
   var marker2 = new google.maps.Marker({position:nyu});
   
+  // You also have to put a new marker set map for every college 
   marker1.setMap(map);
   marker2.setMap(map);
+
+  //  Make a info window for each college
    var infowindow = new google.maps.InfoWindow({
     content: "Hello World!"
   });
   infowindow.open(map,marker);
 }
+
+
+// SUNY Colleges
+function myMap() {
+    // SUNY MAP Coordinates
+  var  = new google.maps.LatLng(,-);
+  var  = new google.maps.LatLng(,-);
+  var  = new google.maps.LatLng(,-);
+  var  = new google.maps.LatLng(,-);
+
+  var mapCanvas = document.getElementById("map");
+  var mapOptions = {center: nyu, zoom: 6};
+  var map = new google.maps.Map(mapCanvas, mapOptions);
+
+  // You Have To Make a new marker variable for every college 
+  var marker1 = new google.maps.Marker({position:rpi});
+  var marker2 = new google.maps.Marker({position:nyu});
+
+  // You also have to put a new marker set map for every college 
+  marker1.setMap(map);
+  marker2.setMap(map);
+
+  //  Make a info window for each college
+   var infowindow = new google.maps.InfoWindow({
+    content: "Hello World!"
+  });
+  infowindow.open(map,marker);
+}
+
 </script>
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBKaRTQet_0WNGbmUoEy0Q8lGL0qNKim5g&callback=myMap"></script>
