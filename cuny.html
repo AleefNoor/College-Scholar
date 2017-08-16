@@ -1,7 +1,81 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+ <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Stylish Portfolio - Start Bootstrap Template</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- Custom CSS -->
+    <link href="css/stylish-portfolio.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+</head>
+<body>
+<div style="text-align: right; width: 100%;">
+<button id="right" style="font-size:30px;cursor:pointer" onclick="openNav()">Menu</button>
+</div>
+</body>
 <style>
+
+body {
+    font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+#color {
+    background-color: transparent;
+    outline: none;
+    border: none;
+}
 
 button.accordion {
     background-color: #40BCD8;
@@ -27,53 +101,21 @@ div.panel {
 }
 </style>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Stylish Portfolio - Start Bootstrap Template</title>
-
-    <!-- Bootstrap Core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom Fonts -->
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
-
-    <!-- Custom CSS -->
-    <link href="css/stylish-portfolio.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-
-</head>
-
-<body>
-    <!-- Navigation -->
-    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-book"></i></a>
-    <nav id="sidebar-wrapper">
-        <ul class="sidebar-nav">
-            <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
-            <li class="sidebar-brand">
-            </li>
-            <li>
-                <a href="#top" onclick=$( "#menu-close").click();>Home</a>
-            </li>
-            <li>
-                <a href="#about" onclick=$( "#menu-close").click();>College Info</a>
-            </li>
-            <li>
-                <a href="#services" onclick=$( "#menu-close").click();>College Info.</a>
-            </li>
-            <li>
-                <a href="#portfolio" onclick=$( "#menu-close").click();>College Process</a>
-            </li>
-            <li>
-                <a href="#contact" onclick=$( "#menu-close").click();>Contact</a>
-            </li>
-        </ul>
-    </nav>
+   
 <body>
 
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <button id="color"><a href="./index.html">Home</a></button>
+  <button id="color"><a href="#">About Us</a></button>
+  <div class="dropdown">
+  <button id="color"><a href="#" class="dropbtn">College Info</a></button>
+  </div>
+  <button id="color"><a href="#">College Process</a></button>
+  <button id="color"><a href="#">Contact</a></button>
+</div>
+
+</body>
 <h2>CUNY [City University of New York]</h2>
 
 <button class="accordion">Baruch College</button>
@@ -248,6 +290,14 @@ for (i = 0; i < acc.length; i++) {
             panel.style.display = "block";
         }
     }
+}
+
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
 }
 </script>
 
