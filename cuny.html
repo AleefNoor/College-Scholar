@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
- <meta charset="utf-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -20,299 +20,341 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
     <style>
+        body {
+            font-family: "Lato", sans-serif;
 
-body {
-    font-family: "Lato", sans-serif;
-}
+        }
 
-.sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    right: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-}
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            right: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
 
-.sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-}
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
 
-.sidenav a:hover, .offcanvas a:focus{
-    color: #f1f1f1;
-}
+        .sidenav a:hover, .offcanvas a:focus{
+            color: #f1f1f1;
+        }
 
-.sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-}
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
 
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
+        @media screen and (max-height: 450px) {
+          .sidenav {padding-top: 15px;}
+          .sidenav a {font-size: 18px;}
+        }
 
-#color {
-    background-color: transparent;
-    outline: none;
-    border: none;
-}
+        #color {
+            background-color: transparent;
+            outline: none;
+            border: none;
+        }
 
-button.accordion {
-    background-color: #40BCD8;
-    color: #444;
-    cursor: pointer;
-    padding: 18px;
-    width: 50%;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 15px;
-    transition: 0.4s;
-}
+        button.accordion {
+            background-color: #40BCD8;
+            color: #444;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            transition: 0.4s;
+        }
 
-button.accordion.active, button.accordion:hover {
-    background-color: #1C77C3; 
-    outline: none;
-}
+        button.accordion.active, button.accordion:hover {
+            background-color: #1C77C3; 
+            outline: none;
 
-div.panel {
-    padding: 0 18px;
-    display: none;
-    width: 45%;
-    border: none;
-}
+        }
 
-div#border{
-    width: 49.9%;
-    height: 100%;
-    float: right;
-    border: solid;
-    border-color: orange;
-}
-</style>
+        div.panel {
+            padding: 0 18px;
+            display: none;
+            width: 45%;
+            border: none;
+        }
 
+        div#right{
+            width: 49.9%;
+            height: auto;
+            float: right;
+            border: solid;
+            border-color: orange;
+            justify-content: center;
+            background-color: #C9D6EA;
+        }
+
+        div#left{
+            width: 50%;
+            height: auto;
+            float: left;
+            border: solid;
+            border-color: orange;
+            justify-content: center;
+        }
+
+        img#changes{
+            margin-left: auto;
+            display: block;
+            height: 200px; 
+            width: 200px;
+        }
+
+
+
+    </style>
 </head>
-
 <body>
 
-<div style="text-align: right; width: 100%;">
-<button id="right" style="font-size:30px;cursor:pointer" onclick="openNav()"><i class="fa fa-book"></i></button>
-</div>
+    <div style="text-align: right; width: 100%;">
+        <button id="right" style="font-size:30px;cursor:pointer" onclick="openNav()">
+            <i class="fa fa-book"></i>
+        </button>
+    </div>
 
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <button id="color"><a href="./index.html#top">Home</a></button>
+      <button id="color"><a href="">About Us</a></button>
+      <div class="dropdown">
+        <button id="color"><a href="./index.html#about" class="dropbtn">College Info</a></button>
+      </div>
+      <button id="color"><a href="#">College Process</a></button>
+      <button id="color"><a href="#">Contact</a></button>
+    </div>
 
+    <h2>CUNY [City University of New York]</h2>
 
-<div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <button id="color"><a href="./index.html#top">Home</a></button>
-  <button id="color"><a href="">About Us</a></button>
-  <div class="dropdown">
-  <button id="color"><a href="./index.html#about" class="dropbtn">College Info</a></button>
-  </div>
-  <button id="color"><a href="#">College Process</a></button>
-  <button id="color"><a href="#">Contact</a></button>
-</div>
+    <div id="right"> 
+        <img id = "changes" src ="c.jpeg" style="float:right;width:50%"></img>
 
-<h2>CUNY [City University of New York]</h2>
+        <span style="float:left;width:50%; font-size: 20px"> 
+            CUNY is the public university system of New York City. If you love living in a city enviornment then these colleges are perfect for you. On the left are the top 10 CUNYs listed in alphabetical order. Click on the college(s) to learn more.
 
-<div id="border"></div>
-<button class="accordion">Baruch College</button>
-<div class="panel">
-  <p>Midtown, Manhattan <br>
-Acceptance Rate: 32% <br>
-Popular Majors: Accounting, Business Administration, Investments and Securities, Sales and Marketing. <br>
-Application Fee: $65 <br>
-GPA: 3.30  <br>
-SAT Critical Reading: 540/640 <br>
-    Math: 600/690  <br>
-    Average: 1170-1280  <br>
-ACT: 25-29 <br>
-College Homepage <a href="http://www.brooklyn.cuny.edu/web/home.php"> Click Here.</a><br>
-For more reviews and informarion <a href="https://www.usnews.com/best-colleges/baruch-cuny-4766">US News Review</a>
-</p>
-</div>
+        </span>
+        
+    </div>
 
-<button class="accordion">Brooklyn College</button>
-<div class="panel">
-  <p>Brooklyn
-Acceptance Rate: 37% <br>
-Popular Majors: Accounting, Biology, Business Administration and Management, Teacher Education, Psychology<br>
-Application Fee: $65<br>
-GPA: 3.31<br>
-SAT Critical Reading: 490/580 <br>
-    Math: 530/630 <br>
-    Average: 1050-1250<br>
-ACT: N/A<br>
-College Homepage <a href="http://www.baruch.cuny.edu/"> Click Here.</a><br>
-For more reviews and information <a href="https://www.usnews.com/best-colleges/brooklyn-college-2687">US News Review</a>
-.</p>
-</div>
+<div id = "left">
+    <button class="accordion">Baruch College</button>
+    <div class="panel">
+      <p>
+        Midtown, Manhattan <br>
+        Acceptance Rate: 32% <br>
+        Popular Majors: Accounting, Business Administration, Investments and Securities, Sales and Marketing. <br>
+        Application Fee: $65 <br>
+        GPA: 3.30  <br>
+        SAT Critical Reading: 540/640 <br>
+        Math: 600/690  <br>
+        Average: 1170-1280  <br>
+        ACT: 25-29 <br>
+        College Homepage 
+        <a href="http://www.brooklyn.cuny.edu/web/home.php"> Click Here.</a><br>
+        For more reviews and informarion 
+        <a href="https://www.usnews.com/best-colleges/baruch-cuny-4766">US News Review</a>
+      </p>
+    </div>
 
-<button class="accordion">CCNY (City College of New York)</button>
-<div class="panel">
-  <p>Manhattan (Harlem&#39s Hamilton Heights)<br>
-Acceptance Rate: 43% <br>
-Popular Majors: Psychology, Engineering, Social Science, Performing Arts, Biological and Biomedical Sciences <br>
-Application Fee: $65<br>
-GPA: 3.40<br>
-SAT Critical Reading: 470/600<br>
-    Math: 530/650<br>
-    Average: 1040-1290<br>
-ACT: N/A<br>
-College Homepage <a href="https://www.ccny.cuny.edu/"> Click Here.</a><br>
-For more reviews and information <a href="https://www.unigo.com/colleges/cuny-city-college"></a></p>
-</div> 
+    <button class="accordion">Brooklyn College</button>
+    <div class="panel">
+        <p>Brooklyn
+            Acceptance Rate: 37% <br>
+            Popular Majors: Accounting, Biology, Business Administration and Management, Teacher Education, Psychology<br>
+            Application Fee: $65<br>
+            GPA: 3.31<br>
+            SAT Critical Reading: 490/580 <br>
+            Math: 530/630 <br>
+            Average: 1050-1250<br>
+            ACT: N/A<br>
+            College Homepage 
+            <a href="http://www.baruch.cuny.edu/"> Click Here.</a><br>
+            For more reviews and information 
+            <a href="https://www.usnews.com/best-colleges/brooklyn-college-2687">US News Review</a>
+        </p>
+    </div>
 
-<button class="accordion">City Tech (New York City College of Technology)</button>
-<div class="panel">
-  <p>Jay Street, Brooklyn  <br> 
-Acceptance Rate: 74%  <br> 
-Popular Majors: Architectural Technology, Community Organization and Advocacy, Computer Engineering Technology, Hospitality Administration, Information Science <br> 
-Application Fee: $65 <br> 
-GPA: 2.95 <br> 
-SAT Critical Reading: SAT SCORES NOT REQUIRED <br> 
-    Math:... <br>
-    Average: 820-1020 <br> 
-ACT:14  <br> 
-College Homepage <a href="https://www.csi.cuny.edu/"> Click Here.</a><br>
-For more reviews and information <a href="https://www.niche.com/colleges/cuny-new-york-city-college-of-technology/">Niche Review.</a>
-</p>
-</div>
+    <button class="accordion">CCNY (City College of New York)</button>
+    <div class="panel">
+        <p>
+            Manhattan (Harlem&#39s Hamilton Heights)<br>
+            Acceptance Rate: 43% <br>
+            Popular Majors: Psychology, Engineering, Social Science, Performing Arts, Biological and Biomedical Sciences <br>
+            Application Fee: $65<br>
+            GPA: 3.40<br>
+            SAT Critical Reading: 470/600<br>
+                Math: 530/650<br>
+                Average: 1040-1290<br>
+            ACT: N/A<br>
+            College Homepage <a href="https://www.ccny.cuny.edu/"> Click Here.</a><br>
+            For more reviews and information <a href="https://www.unigo.com/colleges/cuny-city-college"></a>
+        </p>
+    </div> 
 
-<button class="accordion">College of Staten Island </button>
-<div class="panel">
-  <p> Central Staten Island <br>
-Acceptance Rate: 98% <br>
-Popular Majors: Accounting, Business, Economics, English, Liberal Arts, Psychology, Social Sciences<br>
-Application Fee: $65<br>
-GPA: 3.06<br>
-SAT Critical Reading: 480/590<br>
-    Math: 510/580<br>
-    Average: 990-1170<br>
-ACT: N/A<br>
-College Homepage <a href="http://www.citytech.cuny.edu/"> Click Here.</a><br>
-For more reviews and information <a href="https://www.niche.com/colleges/cuny-college-of-staten-island/">Niche Review.</a>
-</p>
-</div>
+    <button class="accordion">City Tech (New York City College of Technology)</button>
+    <div class="panel">
+      <p>
+        Jay Street, Brooklyn  <br> 
+        Acceptance Rate: 74%  <br> 
+        Popular Majors: Architectural Technology, Community Organization and Advocacy, Computer Engineering Technology, Hospitality Administration, Information Science <br> 
+        Application Fee: $65 <br> 
+        GPA: 2.95 <br> 
+        SAT Critical Reading: SAT SCORES NOT REQUIRED <br> 
+            Math:... <br>
+            Average: 820-1020 <br> 
+        ACT:14  <br> 
+        College Homepage <a href="https://www.csi.cuny.edu/"> Click Here.</a><br>
+        For more reviews and information <a href="https://www.niche.com/colleges/cuny-new-york-city-college-of-technology/">Niche Review.</a>
+      </p>
+    </div>
 
-<button class="accordion">Hunter College </button>
-<div class="panel">
-  <p>Manhattan&#39s Upper East Side <br> 
-Acceptance Rate: 39% <br> 
-Popular Majors: Accounting, Communication Studies, Economics, English, Nursing, Political Science, Psychology, Sociology<br> 
-Application Fee: $125 <br> 
-GPA: 3.20 <br> 
-SAT Critical Reading: 520/620<br> 
-    Math: 550/640<br> 
-    Average: 1130-1330<br> 
-ACT: N/A<br> 
-College Homepage <a href="https://www.hunter.cuny.edu/"> Click Here.</a><br>
-For more reviews and information <a href="https://www.niche.com/colleges/cuny-hunter-college/">Niche Review.</a>
-</p>
-</div>
+    <button class="accordion">College of Staten Island </button>
+    <div class="panel">
+        <p> 
+            Central Staten Island <br>
+            Acceptance Rate: 98% <br>
+            Popular Majors: Accounting, Business, Economics, English, Liberal Arts, Psychology, Social Sciences<br>
+            Application Fee: $65<br>
+            GPA: 3.06<br>
+            SAT Critical Reading: 480/590<br>
+                Math: 510/580<br>
+                Average: 990-1170<br>
+            ACT: N/A<br>
+            College Homepage <a href="http://www.citytech.cuny.edu/"> Click Here.</a><br>
+            For more reviews and information <a href="https://www.niche.com/colleges/cuny-college-of-staten-island/">Niche Review.</a>
+        </p>
+    </div>
 
-<button class="accordion">John Jay College of Criminal Justice</button>
-<div class="panel">
-  <p>Midtown Manhattan <br> 
-Acceptance Rate: 37% <br> 
-Popular Majors: Criminal Justice, Criminology, Forensic Psychology, Legal Studies, Political Science<br> 
-Application Fee: $125<br> 
-GPA: 2.84<br> 
-SAT Critical Reading: 430/520<br> 
-    Math: 460/540<br> 
-    Average: 940-1120<br> 
-ACT: N/A<br> 
-College Homepage <a href="http://www.jjay.cuny.edu/"> Click Here.</a><br>
-For more reviews and information <a href="https://www.niche.com/colleges/cuny-john-jay-college-of-criminal-justice/">Niche Review.</a>
-</p>
-</div>
+    <button class="accordion">Hunter College </button>
+    <div class="panel">
+        <p>
+            Manhattan&#39s Upper East Side <br> 
+            Acceptance Rate: 39% <br> 
+            Popular Majors: Accounting, Communication Studies, Economics, English, Nursing, Political Science, Psychology, Sociology<br> 
+            Application Fee: $125 <br> 
+            GPA: 3.20 <br> 
+            SAT Critical Reading: 520/620<br> 
+                Math: 550/640<br> 
+                Average: 1130-1330<br> 
+            ACT: N/A<br> 
+            College Homepage <a href="https://www.hunter.cuny.edu/"> Click Here.</a><br>
+            For more reviews and information <a href="https://www.niche.com/colleges/cuny-hunter-college/">Niche Review.</a>
+        </p>
+    </div>
 
-<button class="accordion">Lehman College </button>
-<div class="panel">
-  <p>Bronx <br> 
-Acceptance Rate: 30%<br> 
-Popular Majors: Accounting, Business Administration, Nursing, Psychology, Social Work, Sociology, Speech Pathology and Audiology<br> 
-Application Fee: $125<br> 
-GPA: 3.17<br> 
-SAT Critical Reading: 460/550<br> 
-    Math: 480/560<br> 
-    Average: 960-1120<br> 
-ACT: N/A<br> 
-College Homepage <a href="http://www.lehman.cuny.edu/"> Click Here.</a><br>
-For more reviews and information <a href="https://www.niche.com/colleges/cuny-lehman-college/">Niche Review.</a>
-</p>
-</div>
+    <button class="accordion">John Jay College of Criminal Justice</button>
+    <div class="panel">
+      <p>
+        Midtown Manhattan <br> 
+        Acceptance Rate: 37% <br> 
+        Popular Majors: Criminal Justice, Criminology, Forensic Psychology, Legal Studies, Political Science<br> 
+        Application Fee: $125<br> 
+        GPA: 2.84<br> 
+        SAT Critical Reading: 430/520<br> 
+            Math: 460/540<br> 
+            Average: 940-1120<br> 
+        ACT: N/A<br> 
+        College Homepage <a href="http://www.jjay.cuny.edu/"> Click Here.</a><br>
+        For more reviews and information <a href="https://www.niche.com/colleges/cuny-john-jay-college-of-criminal-justice/">Niche Review.</a>
+      </p>
+    </div>
 
-<button class="accordion">Medgar Evers College</button>
-<div class="panel">
-  <p>Central Brooklyn <br> 
-Acceptance Rate: 99%<br> 
-Popular Majors: Accounting, Biology, Business, Liberal Arts, Nursing, Psychology <br> 
-Application Fee: $65<br> 
-GPA: 2.85<br> 
-SAT Critical Reading: SAT SCORES NOT REQUIRED <br> 
-    Math: N/A<br> 
-    Average: 780-960<br> 
-ACT: N/A<br> 
-College Homepage <a href="http://www.mec.cuny.edu/"> Click Here.</a><br>
-For more reviews and information <a href="https://www.niche.com/colleges/cuny-medgar-evers-college/">Niche Review.</a>
-</p>
-</div>
+    <button class="accordion">Lehman College </button>
+    <div class="panel">
+        <p>Bronx <br> 
+            Acceptance Rate: 30%<br> 
+            Popular Majors: Accounting, Business Administration, Nursing, Psychology, Social Work, Sociology, Speech Pathology and Audiology<br> 
+            Application Fee: $125<br> 
+            GPA: 3.17<br> 
+            SAT Critical Reading: 460/550<br> 
+                Math: 480/560<br> 
+                Average: 960-1120<br> 
+            ACT: N/A<br> 
+            College Homepage <a href="http://www.lehman.cuny.edu/"> Click Here.</a><br>
+            For more reviews and information <a href="https://www.niche.com/colleges/cuny-lehman-college/">Niche Review.</a>
+        </p>
+    </div>
 
-<button class="accordion">Queens College</button>
-<div class="panel">
-  <p>Flushing, Queens <br> 
-Acceptance Rate: 40%<br> 
-Popular Majors: Accounting, Communication Studies, Economics, Elementary Education, English, Finance, History, Political Science, Psychology, Sociology<br> 
-Application Fee: $65<br> 
-GPA: 3.6<br> 
-SAT Critical Reading: 490/580<br> 
-    Math: 530/620<br> 
-    Average: 1090-1270<br> 
-ACT: N/A<br> 
-College Homepage <a href="http://www.qc.cuny.edu/Pages/home.aspx"> Click Here.</a><br>
-For more reviews and information <a href="https://www.niche.com/colleges/cuny-queens-college/">Niche Review.</a>
-</p>
-</div>
+    <button class="accordion">Medgar Evers College</button>
+    <div class="panel">
+        <p>
+            Central Brooklyn <br> 
+            Acceptance Rate: 99%<br> 
+            Popular Majors: Accounting, Biology, Business, Liberal Arts, Nursing, Psychology <br> 
+            Application Fee: $65<br> 
+            GPA: 2.85<br> 
+            SAT Critical Reading: SAT SCORES NOT REQUIRED <br> 
+                Math: N/A<br> 
+                Average: 780-960<br> 
+            ACT: N/A<br> 
+            College Homepage <a href="http://www.mec.cuny.edu/"> Click Here.</a><br>
+            For more reviews and information <a href="https://www.niche.com/colleges/cuny-medgar-evers-college/">Niche Review.</a>
+        </p>
+    </div>
 
+    <button class="accordion">Queens College</button>
+    <div class="panel">
+        <p>Flushing, Queens <br> 
+            Acceptance Rate: 40%<br> 
+            Popular Majors: Accounting, Communication Studies, Economics, Elementary Education, English, Finance, History, Political Science, Psychology, Sociology<br> 
+            Application Fee: $65<br> 
+            GPA: 3.6<br> 
+            SAT Critical Reading: 490/580<br> 
+                Math: 530/620<br> 
+                Average: 1090-1270<br> 
+            ACT: N/A<br> 
+            College Homepage <a href="http://www.qc.cuny.edu/Pages/home.aspx"> Click Here.</a><br>
+            For more reviews and information <a href="https://www.niche.com/colleges/cuny-queens-college/">Niche Review.</a>
+        </p>
+    </div>
 
+<div>
 
-<script>
-var acc = document.getElementsByClassName("accordion");
-var i;
+    <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
 
-for (i = 0; i < acc.length; i++) {
-    acc[i].onclick = function(){
-        this.classList.toggle("active");
-        var panel = this.nextElementSibling;
-        if (panel.style.display === "block") {
-            panel.style.display = "none";
-        } else {
-            panel.style.display = "block";
+    for (i = 0; i < acc.length; i++) {
+        acc[i].onclick = function(){
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+                panel.style.display = "none";
+            } else {
+                panel.style.display = "block";
+            }
         }
     }
-}
 
-function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
-}
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+    }
 
-function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-}
-</script>
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+    }
+    </script>
 
  <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
