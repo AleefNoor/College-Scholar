@@ -93,12 +93,22 @@ button.accordion {
 
 button.accordion.active, button.accordion:hover {
     background-color: #1C77C3; 
+    outline: none;
 }
 
 div.panel {
     padding: 0 18px;
     display: none;
     width: 45%;
+    border: none;
+}
+
+div#border{
+    width: 50%;
+    height: 100%;
+    float: right;
+    border: solid;
+    border-color: orange;
 }
 </style>
 
@@ -117,8 +127,10 @@ div.panel {
 </div>
 
 </body>
+
 <h2>CUNY [City University of New York]</h2>
 
+<div id="border"></div>
 <button class="accordion">Baruch College</button>
 <div class="panel">
   <p>Midtown, Manhattan <br>
@@ -277,6 +289,9 @@ College Homepage <a href="http://www.qc.cuny.edu/Pages/home.aspx"> Click Here.</
 For more reviews and information <a href="https://www.niche.com/colleges/cuny-queens-college/">Niche Review.</a>
 </p>
 </div>
+
+
+
 <script>
 var acc = document.getElementsByClassName("accordion");
 var i;
