@@ -1,100 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Simple Sidebar - Start Bootstrap Template</title>
+    <title>Stylish Portfolio - Start Bootstrap Template</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 
-    <!-- Custom styles for this template -->
-    <link href="css/simple-sidebar.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/stylish-portfolio.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
 
 <style>
 
-body {
-    font-family: "Lato", sans-serif;
-}
+* {box-sizing:border-box}
+        body {
+            font-family: "Lato", sans-serif;
 
-.sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    right: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-}
+        }
 
-.sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-}
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            right: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
 
-.sidenav a:hover, .offcanvas a:focus{
-    color: #f1f1f1;
-}
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
 
-.sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-}
+        .sidenav a:hover, .offcanvas a:focus{
+            color: #f1f1f1;
+        }
 
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
 
+        @media screen and (max-height: 450px) {
+          .sidenav {padding-top: 15px;}
+          .sidenav a {font-size: 18px;}
+        }
 
-button.accordion {
-    background-color: #FCF6BD;
-    color: #444;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 15px;
-    transition: 0.4s;
-}
+        #color {
+            background-color: transparent;
+            outline: none;
+            border: none;
+        }
 
-button.accordion.active, button.accordion:hover {
-    background-color: #AFECE7; 
-}
+        button.accordion {
+            background-color: #FCF6BD;
+            color: #444;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            transition: 0.4s;
+        }
 
-div.panel {
-    padding: 0 18px;
-    display: none;
-    background-color: white;
-    width: 100%;
-}
+        button.accordion.active, button.accordion:hover {
+            background-color: #1C77C3; 
+            outline: none;
 
-#color {
-    background-color: transparent;
-    outline: none;
-    border: none;
-}
+        }
 
- div#left{
+        div.panel {
+            padding: 0 18px;
+            display: none;
+            width: 45%;
+            border: none;
+        }
+
+        div#right{
+            top: 0;
+            width: 49.9%;
+            height: auto;
+            float: right;
+            border: solid;
+            border-color: navy;
+            justify-content: center;
+            background-color: #C9D6EA;
+        }
+
+        div#left{
             width: 50%;
             height: auto;
             float: left;
@@ -103,43 +117,115 @@ div.panel {
             justify-content: center;
         }
 
- div#right{
-            width: 49.9%;
-            height: auto;
-            float: right;
-            border: solid;
-            border-color: orange;
-            justify-content: center;
-            background-color: #C9D6EA;
+        img#changes{
+            margin-left: auto;
+            display: block;
+            height: 200px; 
+            width: 200px;
         }
 
 
-</style>
+        div#head1{
+          background-image: url("h1.jpg");
+          height: 25%;
+        }
+
+        
+.mySlides {display:none}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: blue;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: white;
+  font-size: 25px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+  background-color: darkblue;
+}
+
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor:pointer;
+  height: 10px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: orange;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ;
+}
+
+.active, .dot:hover {
+  background-color: blue;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+    </style>
 
 </head>
 <body>
-
-
-  
+<div id="head1">
 <div style="text-align: right; width: 100%;">
 <button id="right" style="font-size:30px;cursor:pointer" onclick="openNav()"><i class="fa fa-university"></i></button>
 </div>
-
-    <!-- Header -->
-
-      <!-- Page Content -->
-
-        <div id="page-content-wrapper">
-
-            <div class="container-fluid">
-
-                <h1>Private</h1>
-
-            </div>
-
-        </div>
-
-        <!-- /#page-content-wrapper -->
 
 <div id="mySidenav" class="sidenav" class = "dropdown">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -150,14 +236,87 @@ div.panel {
   <button id="color"><a href="#">Contact</a></button>
 </div>
 
-<h2>Top 10 Private Colleges in NYC:</h2>
+<h1>Private Colleges in NY:</h1>
+</div>
 
 <div id="right"> 
-    <span style="float:left; width:50%;font-size: 20px">
-        <br><br>
-        Private schools are also known as independent schools because they are not funded by the government. <br> This is why private schools have the right to charge their students tuition. Privates rely wholly on student <br>fees and payments. 
+
+      <img src="private.jpg" id = "changes" style="float:right; width: 50%"></img>
+    <span style="float:left;width:50%; font-size: 20px; line-height: 150%">
+        Private schools are also known as independent schools because they are not funded by the government. <br> This is why private schools have the right to charge their students tuition.Click on the private colleges on the left to get information on some popular private colleges.
     </span>
-    <img src="private.png" style="float:right; width: 50%"></img>
+
+    <div class="slideshow-container">
+
+<div class="mySlides fade">
+  <img src="Barnard.jpg" style="width:100%;height:299px;">
+  <div class="text"><b>Barnard College</b></div>
+</div>
+
+<div class="mySlides fade">
+  <img src="columbia.jpg" style="width:100%;height:299px;">
+  <div class="text"><b>Columbia University [IVY League]</b></div>
+</div>
+
+<div class="mySlides fade">
+  <img src="cooper_union.jpg" style="width:100%;height:299px;">
+  <div class="text"><b>Cooper Union College</b></div>
+</div>
+
+<div class="mySlides fade">
+  <img src="Cornell.jpg" style="width:100%; height:299px;">
+  <div class="text"><b>Cornell University</b></div>
+</div>
+
+<div class="mySlides fade">
+  <img src="fordham.jpg" style="width:100%;height:299px;">
+  <div class="text"><b>Fordham University</b></div>
+</div>
+
+<div class="mySlides fade">
+  <img src="NYU.JPG" style="width:100%;height:299px;">
+  <div class="text"><b>New York University</b></div>
+</div>
+
+<div class="mySlides fade">
+  <img src="RPI.jpg" style="width:100%;height:299px;">
+  <div class="text"><b>Rensselear Polytechnic Institute</b></div>
+</div>
+
+
+<div class="mySlides fade">
+  <img src="St_Johns.jpg" style="width:100%;height:299px;">
+  <div class="text"><b>St. John University</b></div>
+</div>
+
+<div class="mySlides fade">
+  <img src="syracuse.jpg" style="width:100%;height:299px;">
+  <div class="text"><b>Syracuse University</b></div>
+</div>
+
+<div class="mySlides fade">
+  <img src="Rochester.jpg" style="width:100%;height:299px">
+  <div class="text"><b>University of Rochester</b></div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+
+<div id= "dot1" style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>
+  <span class="dot" onclick="currentSlide(6)"></span>
+  <span class="dot" onclick="currentSlide(7)"></span>  
+  <span class="dot" onclick="currentSlide(8)"></span>
+  <span class="dot" onclick="currentSlide(9)"></span> 
+  <span class="dot" onclick="currentSlide(10)"></span>   
+</div>
+</div>
 
 </div>
 
@@ -338,36 +497,62 @@ div.panel {
 
 </div>
 
-<script>
-var acc = document.getElementsByClassName("accordion");
-var i;
+   <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
 
-for (i = 0; i < acc.length; i++) {
-    acc[i].onclick = function(){
-        this.classList.toggle("active");
-        var panel = this.nextElementSibling;
-        if (panel.style.display === "block") {
-            panel.style.display = "none";
-        } else {
-            panel.style.display = "block";
+    for (i = 0; i < acc.length; i++) {
+        acc[i].onclick = function(){
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+                panel.style.display = "none";
+            } else {
+                panel.style.display = "block";
+            }
         }
     }
+
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+    }
+
+    </script>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
 }
 
-function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
+function currentSlide(n) {
+  showSlides(slideIndex = n);
 }
 
-function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
 }
 </script>
 
-
-    <!-- /#wrapper -->
-  
-
-    <!-- Bootstrap core JavaScript -->
+ <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/popper/popper.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
