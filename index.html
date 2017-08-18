@@ -258,9 +258,17 @@
 <script>
  function myMap() {
       // CUNY MAP Coordinates
-var Baruch = new google.maps.LatLng(40.7402,-73.9834);
-var nyu = new google.maps.LatLng(40.7295,-73.9965);
-var Brooklyn = new google.maps.LatLng(40.6314,-73.9544);
+ var Baruch = new google.maps.LatLng(40.7402,-73.9834);
+ var nyu = new google.maps.LatLng(40.7295,-73.9965);
+ var Brooklyn = new google.maps.LatLng(40.6314,-73.9544);
+ var City Tech = new google.maps.LatLng(40.6955,-73.9875);
+ var Staten Island= new google.maps.LatLng(40.6018,-74.1485);
+ var  Hunter= new google.maps.LatLng(40.7685,-73.9646);
+ var  John Jay= new google.maps.LatLng(40.7704,-73.9885);
+ var  Lehman= new google.maps.LatLng(40.8733,-73.8941);
+ var  Medger Evers= new google.maps.LatLng(40.6665,-73.9576);
+ var  Queens= new google.maps.LatLng(40.7363,-73.8161);
+
 
  //SUNY
  var Buffalo = new google.maps.LatLng(42.9336,-78.8821);
@@ -274,7 +282,18 @@ var Brooklyn = new google.maps.LatLng(40.6314,-73.9544);
  var Maritime = new google.maps.LatLng(40.8092,-73.8011);
  var Westchester = new google.maps.LatLng(41.0684,-73.7896);
  // var  = new google.maps.LatLng(,-);
-  
+
+ //Private
+ var Barnard = new google.maps.LatLng(40.8091,-73.9640);
+ var Columbia = new google.maps.LatLng(40.8075,-73.9626);
+ var Cooper = new google.maps.LatLng(40.7281,-73.9916);
+ var Cornell = new google.maps.LatLng(42.4534,-76.4735);
+ var Fordham = new google.maps.LatLng(40.8620,-73.8857);
+ var NYU= new google.maps.LatLng(40.7295,-73.9965);
+ var RPI = new google.maps.LatLng(42.7302,-73.6788);
+ var St_John = new google.maps.LatLng(40.7216,-73.7947);
+ var Syracuse = new google.maps.LatLng(43.0392,-76.1351);
+ var Rochester = new google.maps.LatLng(43.1306,-77.6260);
     
     var mapCanvas = document.getElementById("map");
     var mapOptions = {center: nyu, zoom: 6};
@@ -285,32 +304,71 @@ var Brooklyn = new google.maps.LatLng(40.6314,-73.9544);
  var marker1 = new google.maps.Marker({position:Baruch});
  var marker2 = new google.maps.Marker({position:nyu});
  var marker3 = new google.maps.Marker({position: Brooklyn});
- var marker4 = new google.maps.Marker({position:Buffalo});
- var marker5 = new google.maps.Marker({position:Corning});
- var marker6 = new google.maps.Marker({position:Empire});
- var marker7 = new google.maps.Marker({position:ESF});
- var marker8 = new google.maps.Marker({position:FIT});
- var marker9 = new google.maps.Marker({position:Oswego});
- var marker10 = new google.maps.Marker({position:Stony});
- var marker11= new google.maps.Marker({position:Optometry});
- var marker12= new google.maps.Marker({position:Maritime});
- var marker13 = new google.maps.Marker({position:Westchester});
+ var marker4 = new google.maps.Marker({position:City Tech});
+ var marker5 = new google.maps.Marker({position:Staten Island});
+ var marker6 = new google.maps.Marker({position:Hunter});
+ var marker7 = new google.maps.Marker({position:John Jay});
+ var marker8 = new google.maps.Marker({position:Lehman});
+ var marker9 = new google.maps.Marker({position:Medger Evers});
+ var marker10 = new google.maps.Marker({position:Queens});
+ var marker11 = new google.maps.Marker({position:Buffalo});
+ var marker12 = new google.maps.Marker({position:Corning});
+ var marker13 = new google.maps.Marker({position:Empire});
+ var marker14 = new google.maps.Marker({position:ESF});
+ var marker15 = new google.maps.Marker({position:FIT});
+ var marker16 = new google.maps.Marker({position:Oswego});
+ var marker17 = new google.maps.Marker({position:Stony});
+ var marker18= new google.maps.Marker({position:Optometry});
+ var marker19= new google.maps.Marker({position:Maritime});
+ var marker20 = new google.maps.Marker({position:Westchester});
+ var marker21 = new google.maps.Marker({position:Barnard});
+ var marker22 = new google.maps.Marker({position:Columbia});
+ var marker23 = new google.maps.Marker({position:Cooper});
+ var marker24 = new google.maps.Marker({position:Cornell});
+ var marker25 = new google.maps.Marker({position:Fordham});
+ var marker26 = new google.maps.Marker({position:NYU});
+ var marker27 = new google.maps.Marker({position:RPI});
+ var marker28 = new google.maps.Marker({position:St_John});
+ var marker29 = new google.maps.Marker({position:Syracuse});
+ var marker30 = new google.maps.Marker({position:Rochester});
+
+
+ 
+
  
     
     // You also have to put a new marker set map for every college 
-marker1.setMap(map);
-marker2.setMap(map);
-  marker3.setMap(map);
-  marker4.setMap(map);
-  marker5.setMap(map);
-  marker6.setMap(map);
-  marker7.setMap(map);
-  marker8.setMap(map);
-  marker9.setMap(map);
-  marker10.setMap(map);
-  marker11.setMap(map);
-  marker12.setMap(map);
-  marker13.setMap(map);
+ marker1.setMap(map);
+ marker2.setMap(map);
+ marker3.setMap(map);
+ marker4.setMap(map);
+ marker5.setMap(map);
+ marker6.setMap(map);
+ marker7.setMap(map);
+ marker8.setMap(map);
+ marker9.setMap(map);
+ marker10.setMap(map);
+ marker11.setMap(map);
+ marker12.setMap(map);
+ marker13.setMap(map);
+ marker14.setMap(map);
+ marker15.setMap(map);
+ marker16.setMap(map);
+ marker17.setMap(map);
+ marker18.setMap(map);
+ marker19.setMap(map);
+ marker20.setMap(map);
+ marker21.setMap(map);
+ marker22.setMap(map);
+ marker23.setMap(map);
+ marker24.setMap(map);
+ marker25.setMap(map);
+ marker26.setMap(map);
+ marker27.setMap(map);
+ marker28.setMap(map);
+ marker29.setMap(map);
+ marker30.setMap(map);
+
   
   
     //  Make a info window for each college
