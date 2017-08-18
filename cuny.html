@@ -100,7 +100,7 @@
             height: auto;
             float: right;
             border: solid;
-            border-color: orange;
+            border-color: navy;
             justify-content: center;
             background-color: #C9D6EA;
         }
@@ -119,6 +119,12 @@
             display: block;
             height: 200px; 
             width: 200px;
+        }
+
+
+        div#head1{
+          background-image: url("h1.jpg");
+          height: 25%;
         }
 
         
@@ -169,14 +175,6 @@
   background-color: darkblue;
 }
 
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
 
 /* The dots/bullets/indicators */
 .dot {
@@ -184,14 +182,14 @@
   height: 13px;
   width: 13px;
   margin: 0 2px;
-  background-color: #bbb;
+  background-color: orange;
   border-radius: 50%;
   display: inline-block;
-  transition: background-color 0.6s ease;
+  transition: background-color 0.6s ;
 }
 
 .active, .dot:hover {
-  background-color: #717171;
+  background-color: blue;
 }
 
 /* Fading animation */
@@ -220,10 +218,10 @@
     </style>
 </head>
 <body>
-
+<div id="head1">
     <div style="text-align: right; width: 100%;">
-        <button id="right" style="font-size:30px;cursor:pointer" onclick="openNav()">
-            <i class="fa fa-book"></i>
+        <button id="design" style="font-size:30px;cursor:pointer" onclick="openNav()">
+            <i class="fa fa-book text-primary"></i>
         </button>
     </div>
 
@@ -238,7 +236,10 @@
       <button id="color"><a href="#">Contact</a></button>
     </div>
 
+
     <h1>CUNY [City University of New York]</h1>
+  </div>
+
 <div id="right"> 
         <img id = "changes" src ="c.jpeg" style="float:right;width:50%"></img>
 
@@ -250,53 +251,53 @@
 <div class="slideshow-container">
 
 <div class="mySlides fade">
-  <img src="baruch.jpg" style="width:100%">
+  <img src="baruch_College.png" style="width:100%;height:300px;">
   <div class="text"><b>Baruch College</b></div>
 </div>
 
 <div class="mySlides fade">
-  <img src="brooklyn.jpg" style="width:100%">
+  <img src="brooklyn.jpg" style="width:100%;height:300px;">
   <div class="text"><b>Brooklyn College</b></div>
 </div>
 
 <div class="mySlides fade">
-  <img src="city_tech.jpg" style="width:100%">
+  <img src="ccny.jpg" style="width:100%;height:300px;">
+  <div class="text"><b>City College</b></div>
+</div>
+
+<div class="mySlides fade">
+  <img src="city_tech.jpg" style="width:100%; height:300px;">
   <div class="text"><b>City Tech</b></div>
 </div>
 
 <div class="mySlides fade">
-  <img src="staten_island.jpg" style="width:100%">
+  <img src="staten_island.jpg" style="width:100%;height:300px;">
   <div class="text"><b>College of Staten Island</b></div>
 </div>
 
 <div class="mySlides fade">
-  <img src="hunter.jpg" style="width:100%">
+  <img src="hunter.jpg" style="width:100%;height:300px;">
   <div class="text"><b>Hunter College</b></div>
 </div>
 
 <div class="mySlides fade">
-  <div class="numbertext">3 / 3</div>
-  <img src="John_Jay.jpg" style="width:100%">
+  <img src="John_Jay.jpg" style="width:100%;height:300px;">
   <div class="text"><b>John Jay</b></div>
 </div>
 
-<div class="mySlides fade">
-  <img src="city_tech.jpg" style="width:100%">
-  <div class="text"><b>City Tech</b></div>
-</div>
 
 <div class="mySlides fade">
-  <img src="lehman.jpg" style="width:100%">
+  <img src="lehman.jpg" style="width:100%;height:300px;">
   <div class="text"><b>Lehman College</b></div>
 </div>
 
 <div class="mySlides fade">
-  <img src="Medgar.jpg" style="width:100%">
+  <img src="Medgar.jpg" style="width:100%;height:300px;">
   <div class="text"><b>Medgar Evers College</b></div>
 </div>
 
 <div class="mySlides fade">
-  <img src="queens.jpg" style="width:100%">
+  <img src="queens.jpg" style="width:100%;height:300px;">
   <div class="text"><b>Queens College</b></div>
 </div>
 
@@ -306,7 +307,7 @@
 </div>
 <br>
 
-<div style="text-align:center">
+<div id= "dot1" style="text-align:center">
   <span class="dot" onclick="currentSlide(1)"></span> 
   <span class="dot" onclick="currentSlide(2)"></span> 
   <span class="dot" onclick="currentSlide(3)"></span> 
@@ -371,7 +372,7 @@
                 Average: 1040-1290<br>
             ACT: N/A<br>
             College Homepage <a href="https://www.ccny.cuny.edu/"> Click Here.</a><br>
-            For more reviews and information <a href="https://www.unigo.com/colleges/cuny-city-college"></a>
+            For more reviews and information <a href="https://www.unigo.com/colleges/cuny-city-college">Niche Review</a>
         </p>
     </div> 
 
